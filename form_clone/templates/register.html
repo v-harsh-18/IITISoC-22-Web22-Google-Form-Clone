@@ -115,17 +115,24 @@
 
     <div id="pussy">
         <h1>Create a Fucking Account</h1>
-        <form action="login" method="POST">
+        <form action="register" method="POST">
             {% csrf_token %}
             <input type="text" name="first_name" placeholder="Name">
             <input type="email" name="username" placeholder="Email">
+            
             <input type="password" name="password" placeholder="Password">
             <input type="password" name="password1" placeholder="Retype Password">
+            <label> 
+                {% for message in messages %}
+                    {{message}}
+                {% endfor %}</label>
             <button type="submit">Sign Up</button>
             <p>Already have an account?</p>
-            <button> <a href ="/"> Sign In</button>
+            <button> Sign In</button>
+            
         </form>
     </div>
+  
 
 
 </body>

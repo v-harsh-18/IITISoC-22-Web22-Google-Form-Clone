@@ -209,6 +209,10 @@
                 <input type="password" name="password" placeholder="password"><br>
                 <button type="submit">Sign In</button><br>
                 <button type="submit"><a href="/register"> Create a Fucking Account</a></button>
+                <label> 
+                    {% for message in messages %}
+                        {{message}}
+                    {% endfor %}</label>
             </form>
 
 
