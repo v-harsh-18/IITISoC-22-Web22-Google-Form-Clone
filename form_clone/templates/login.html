@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login to Fucking forms</title>
+    <title>Login to Fing forms</title>
 
     <style>
         body {
@@ -89,7 +89,7 @@
             box-shadow: 2px 2px 5px;
         }
 
-        form button {
+        form.button {
             color: white;
             border: none;
             font-size: 60%;
@@ -105,31 +105,32 @@
 
         }
 
-        button {
+        .button {
 
             font-size: 1.5rem;
             background-color: white;
             border: 2px solid #1c4283;
             border-radius: 15px;
-            width: 50%;
+            width: 41%;
             color: grey;
             margin: 15px;
             padding: 5px;
             cursor: pointer;
             transition: ease-in-out 0.25s;
         }
-        button a{text-decoration:none}
+        .button {text-decoration:none}
 
-        button:hover {
+        .button:hover {
             background-color: #1c4283;
             color: white;
         }
 
-        button:focus {
+        .button:focus {
             background-color: #1c4283;
             outline: none;
             color: white;
         }
+        
 
         p.left {
             text-align: center;
@@ -167,6 +168,7 @@
             color: #1c4283;
             text-shadow: 0px 0px 2px black;
         }
+        
 
         @media (max-width:820px) {body{padding: 0px;}
             section {
@@ -199,16 +201,16 @@
 
     <section>
         <div class="div" id="left">
-            <h1 id="left">Welcome to F'ing Forms</h1>
-            <img id="logo" src="iiti_logo.png" alt="Fucking LOGO">
+            <h1 id="left">Welcome to Fing Forms</h1>
+            <img id="logo" src="https://s3-eu-west-1.amazonaws.com/tpd/logos/59f071e00000ff0005ae9bf7/0x0.png" alt="LOGO">
 
-            <h3>Just Fucking login nigga:</h3>
-            <form action='' method='POST'>
+            <h3>Login:</h3>
+            <form action="index" method="POST">
                 {% csrf_token %}
                 <input type="email" name="username" placeholder="email"> <br>
                 <input type="password" name="password" placeholder="password"><br>
-                <button type="submit">Sign In</button><br>
-                <button type="submit"><a href="/register"> Create a Fucking Account</a></button>
+                <button class="button" type="submit">Sign In</button><br>
+                <a class="button" href="/register">Create a New Account</a><br>
                 <label> 
                     {% for message in messages %}
                         {{message}}
@@ -222,8 +224,8 @@
 
         <div class="div" id="right">
             <article>
-                <h1>What is F'ing Forms</h1>
-                <p class="right">niche thoda sa gyan chodna hai: <br> Lorem ipsum dolor sit amet consectetur
+                <h1>What is Fing Forms</h1>
+                <p class="right">niche thoda sa gyan dena hai: <br> Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Quisquam ratione odio voluptatem, deleniti at aliquam iusto excepturi deserunt,
                     impedit
                     provident debitis porro! Nesciunt voluptate, aut magni commodi odit, consequatur iusto aperiam,
