@@ -4,6 +4,7 @@ from django.contrib import admin
 
 urlpatterns = [
     path("", views.login, name="login"),
-    path("register", views.register, name="register")
+    path("register", views.register, name="register"),
+    path("index", views.index, name="index")
 
 ]

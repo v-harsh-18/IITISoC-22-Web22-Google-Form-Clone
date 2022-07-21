@@ -15,12 +15,19 @@ def login(request):
             auth.login(request, user)
             return render(request, "index.html")
         else:
-            messages.info(request,"Nigga! couldn't recognize yo' ass")
+            messages.info(request,"Sorry! couldn't recognize you")
             return redirect("login")
     else:
-        return render(request, "login.html")            
+        return render(request, "login.html")    
 
-   
+def create(request):
+    if request.method == 'GET':
+        return render(request,"register.html")
+    else:
+        return render(render,"register.html")            
+
+def index(request):
+    return render(request, "index.html")   
 
 def register(request):
     if request.method == 'POST':
@@ -38,7 +45,7 @@ def register(request):
                 
                 return render(request, "login.html")
         else:
-            messages.info(request,"passwords shi se likh le lodu")
+            messages.info(request,"passwords donot match.")
         return render(request, "register.html")
     else:
         return render(request, "register.html")
